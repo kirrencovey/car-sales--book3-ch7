@@ -17,12 +17,11 @@ salesByWeek.forEach(sale => {
         vehicle += `<div>${entry[0]}: ${entry[1]}</div>`
     }
 
-    let profit = `<h3>Profit: $${sale.gross_profit}</h3><hr>`;
-    let newHTML = salesAgent + vehicle + profit;
+    let profit = `<h3>Profit: $${sale.gross_profit}</h3>`;
+    let newHTML = "<div class='sale'>" + salesAgent + vehicle + profit + "</div>";
     salesContainer.innerHTML += newHTML;
 
 })
-
 
 
 
@@ -42,6 +41,7 @@ const searchResults = document.querySelector("#searchResults");
 
 searchInput.addEventListener('keypress', (event) => {
     if (event.keyCode === 13) {
+    searchResults.innerHTML = "";
     const searchTerm = event.target.value;
 
     salesByWeek.forEach(sale => {

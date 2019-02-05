@@ -1,0 +1,13 @@
+#sales {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.sale {
+    flex-basis: 25%;
+    border: 1px solid palevioletred;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
